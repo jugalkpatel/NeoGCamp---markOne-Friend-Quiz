@@ -75,3 +75,17 @@ function checkHighScore(score, name) {
     }
   }
 }
+
+// carrier program
+const user = readlineSync.question('May I have your name?');
+for (let i = 0; i < questions.length; i++) {
+  const ask = questions[i];
+  askQuestion(ask.question, ask.answer);
+}
+checkHighScore(score, user);
+console.log("----------HIGH SCORE BOARD----------")
+for (let i = 0; i < highestScorers.length; i++) {
+  console.log('Name: ', highestScorers[i].name);
+  console.log('Score: ', highestScorers[i].score);
+  console.log("------------------");
+}
