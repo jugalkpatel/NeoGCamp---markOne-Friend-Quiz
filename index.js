@@ -54,3 +54,24 @@ function askQuestion(question, answer) {
   console.log()
 }
 
+//high score logic
+const highestScorers = [
+  {
+    name: "Jugal",
+    score: 8
+  },
+  {
+    name: "jimmy",
+    score: 9
+  }
+]
+
+function checkHighScore(score, name) {
+  for (let i = 0; i < highestScorers.length; i++) {
+    if(highestScorers[i].score < score) {
+      console.log('congratulations you are on high score board')
+      highestScorers.push({name: name, score: score})
+      break;
+    }
+  }
+}
