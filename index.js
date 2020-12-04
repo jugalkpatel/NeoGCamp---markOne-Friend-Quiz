@@ -43,3 +43,14 @@ const questions = [
   }
 ]
 
+//this function ask questions, check answers and mark score.
+function askQuestion(question, answer) {
+  let getResponse = readlineSync.question(question);
+  if (getResponse.toLowerCase() === answer.toLowerCase()) {
+     score = score + 1;
+  }
+  console.log('Your score is: ',score);
+  console.log('***********************');
+  console.log()
+}
+
